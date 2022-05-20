@@ -1,0 +1,412 @@
+img {
+    max-width:100%;
+  }
+
+body {
+  font-family: Verdana;
+  background-image: url(water.gif);
+  background-size: cover;
+  margin:0;
+  padding:0;
+
+}
+
+.top .middle .bottom {
+  background: #0161d7;
+   border-radius:5px;
+}
+
+.top {
+  grid-area:top;
+  text-align: center;
+}
+
+.middle {
+  grid-area:middle;
+  text-align: center;
+  background: #0161d7;
+}
+
+.bottom {
+  grid-area:bottom;
+  text-align: center;
+  background: #0161d7;
+}
+
+header, nav, main, footer, aside{
+   border-radius:5px;
+}
+
+header {
+    grid-area:header;
+    background:#A6330A;
+    text-align:center;
+    color: #FFFFF;
+
+}
+.headerpic {
+  grid-area: headerpic;
+  padding: 5px;
+  height: 10vmax;
+}
+
+.headertext {
+  grid-area: headertext;
+  text-align: center;
+  color: #FFFFF;
+
+}
+
+.headwrapper {
+  display:grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 25% auto;
+  grid-template-areas:
+  "headerpic headertext"
+}
+/*
+aside {
+    color:white;
+    font-size: 1.25em;
+    padding:10px 0;
+    background-color: #0161d7;
+    grid-area: aside;
+}
+
+
+
+aside h2 {
+    color: #f1b50d;
+}
+
+aside a {
+    color:#FFFFF;
+}
+*/
+.top{
+  grid-area:top;
+}
+
+.middle {
+  grid-area:middle;
+}
+
+.bottom {
+  grid-area:bottom;
+}
+
+header h1 {
+     font-size:5vw;
+     color: white;
+     font-family:Impact;
+     text-shadow: 2px 2px 5px #444444;
+     margin: 0;
+}
+
+header h3 {
+    font-size:2vw;
+    color:#f1b50d;
+    margin:0;
+   text-shadow: 2px 2px 5px #444444;
+
+}
+nav {
+    grid-area:nav;
+    background:#A6330A;
+    }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: background:#A6330A;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+  max-height: 4cm;
+}
+
+li a:hover {
+  background-color: #111111;
+}
+
+li {
+  display: inline-block;
+}
+
+.first {
+  grid-area:first;
+  margin-left:0;
+}
+
+.second {
+  grid-area:second;
+}
+
+.third {
+  grid-area:third;
+}
+
+.fourth {
+  grid-area:fourth;
+}
+
+.fifth {
+  grid-area:fifth;
+}
+
+#navwrapper {
+  display:grid;
+  grid-template-areas:
+  "first second third fourth fifth sixth";
+  }
+main {
+    grid-area:main;
+    background:#0161d7;
+    color:white;
+    padding:5px;
+    }
+
+main h2 {
+    text-align:center;
+    margin:1%;
+    text-shadow: 2px 2px 5px #444444;
+    color: #f1b50d;
+  text-align:center;
+  padding: 5px;
+
+}
+
+main p {
+    color:#fffff;
+    padding:1% 2%;
+    font-size:1em;
+    text-align:center;
+}
+
+main a {
+  color:white;
+  border-radius:5px;
+  background:#0161d7;
+  text-align:center;
+}
+
+main div {
+    text-align:center;
+      padding:5px;
+
+}
+
+ol {
+  padding: 5px;
+  text-align:center;
+}
+
+ol li {
+   padding: 5px;
+  text-align: center;
+}
+
+article {
+ color:white;
+  border-radius:5px;
+  background:#0161d7;
+  text-align:center;
+    padding:5px;
+}
+
+article h2 {
+    color: #f1b50d;
+       text-shadow: 2px 2px 5px #444444;
+       text-align:center;
+  
+}
+
+footer {
+    grid-area:footer;
+    background:#333333;
+    padding:5px;
+    text-align:center;
+    }
+
+footer p {
+     font-size:1em;
+     color:#ffffff;
+     margin:0;
+}
+
+/* grid-area:top; grid-area:middle; grid-area:bottom; */
+
+/*---------------------------Mobile Layout----------------------------*/
+.container1 { /*for later*/
+    display: grid;
+    grid-template-columns:auto;
+    grid-gap:.5em;
+    margin:1%;
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "footer";
+      }
+
+.container2 { /*for index.html*/
+  display: grid;
+  grid-template-columns:auto;
+  grid-gap:.5em;
+  margin:1%;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+    }
+
+.container3 { /*for blog.html*/
+  display: grid;
+  grid-template-columns:100%;
+  grid-gap:.5em;
+  margin:1%;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "top"
+    "middle"
+    "bottom"
+    "footer";
+    }
+
+  
+  /*This stuff is for the hamburger menu*/
+  .toggleNav {
+      display:grid; /*This is what allows the hamburger icon and "Menu" to display*/
+      text-align:center;
+      font-size:1.5em;
+      font-weight:bold;
+      padding:10px;
+      }
+  
+  #flex-nav ul {
+      display: none; /*jQuery toggles the nav from to this class to the .open when clicked*/
+      text-align:center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      }
+   
+  #flex-nav ul.open { /*.open is the class that gets toggled when clicked (with help from the jQuery code)*/
+      display:grid;
+      }
+      
+  #flex-nav li {
+      padding-left:10px;
+      padding-top:10px;
+      }
+  
+  
+  /*-----------------------Tablet Media Query------------------------*/
+  @media only screen and (min-width: 480px)  {
+    .container1 { /*for index.html*/
+        grid-template-columns:auto 1fr;
+        grid-template-areas:
+          "header header"
+          "nav main"
+          "footer footer";
+          }
+  
+    .container2 { /*for index.html*/
+      display: grid;
+        grid-template-columns:auto 1fr;
+        grid-gap:.5em;
+        margin:1%;
+        grid-template-areas:
+             "header header"
+             "nav nav"
+             "main main"
+             "footer footer";
+    }
+
+    .container3 { /*for blog.html*/
+      display: grid;
+      grid-template-columns:100%;
+      grid-gap:.5em;
+      margin:1%;
+      grid-template-areas:
+        "header header"
+        "nav nav"
+        "main main"
+        "top top"
+        "middle middle"
+        "bottom bottom"
+        "footer footer";
+        }
+  
+  /* Below will change from hamburger menu to side navigation*/
+    
+  .toggleNav {
+      display: none; /*Makes the hamburger icon with the word "Menu" to disappear at this screen size*/
+    }
+    
+  #flex-nav ul {
+      display:grid;
+      text-align:left;
+    }
+  
+  #flex-nav li {
+      padding-left:10px;
+      padding-top:10px;
+    }
+  
+  }
+  
+  /*-----------------------Desktop Media Query------------------------*/
+  @media only screen and (min-width: 960px)  {
+  
+  .container1 { /*for later*/
+    grid-template-columns:auto 1fr;
+    grid-template-areas:
+      "header header"
+      "nav main"
+      "footer footer";
+      }
+
+  .container2 { /*for index.html*/
+        display: grid;
+          grid-template-columns:auto;
+          grid-gap:.5em;
+          margin:1%;
+          grid-template-areas:
+               "header header"
+               "nav nav"
+               "main main"
+               "footer footer";
+        padding-right: 2cm;
+        padding-left: 2cm;
+      }
+      .container3 { /*for blog.html*/
+        display: grid;
+          grid-template-columns:auto 1fr 1.5fr;
+          grid-gap:.5em;
+          margin:1%;
+          grid-template-areas:
+               "header header header"
+               "nav main top"
+               "nav main middle"
+               "nav main bottom"
+               "footer footer footer";
+      }
+  }
+
+  
